@@ -76,15 +76,17 @@ public class Movement : MonoBehaviour
         transform.eulerAngles += new Vector3(0, MouseDelta.x * LookSens, 0);
     }
 
-    void PlayerMovement() 
+    private bool isStaminaBoosted = false;
+
+    void PlayerMovement()
     {
         IsMoving = (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)));
-        float horizontalInput = 0f; 
-        float verticalInput = 0f; 
+        float horizontalInput = 0f;
+        float verticalInput = 0f;
 
-        if (Input.GetKey(KeyCode.W)) 
+        if (Input.GetKey(KeyCode.W))
         {
-            verticalInput = 1f; 
+            verticalInput = 1f;
         }
         else if (Input.GetKey(KeyCode.S))
         {
@@ -102,25 +104,30 @@ public class Movement : MonoBehaviour
 
         if (IsCrouching)
         {
-            WalkSpeed = CrouchSpeed; 
+            WalkSpeed = CrouchSpeed;
         }
-        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W) && CurrentStamina > 0)  
+        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W) && CurrentStamina > 0)
         {
-            verticalInput = 1f; 
-            WalkSpeed = SprintSpeed; 
-            DecreaseStamina(Time.deltaTime); 
-            CanRegenerateStamina = true; 
+            verticalInput = 1f;
+            WalkSpeed = SprintSpeed;
+
+            // Check if stamina is temporarily boosted
+            if (!isStaminaBoosted)
+            {
+                DecreaseStamina(Time.deltaTime);
+            }
+            CanRegenerateStamina = true;
         }
         else
         {
-            WalkSpeed = 5f; 
+            WalkSpeed = 5f;
         }
 
-        if (!CanRegenerateStamina) 
+        if (!CanRegenerateStamina)
         {
-            StartCoroutine(DelayStaminaRegeneration()); 
+            StartCoroutine(DelayStaminaRegeneration());
         }
-        else if (CanRegenerateStamina) 
+        else if (CanRegenerateStamina && !isStaminaBoosted) // Regenerate stamina only if not boosted
         {
             RegenerateStamina(Time.deltaTime);
         }
@@ -197,6 +204,20 @@ public class Movement : MonoBehaviour
         yield return new WaitForSeconds(4f); 
         canStartRegeneration = true; 
         Debug.Log("Stamina regeneration enabled again");
+    }
+
+    public IEnumerator TemporaryStaminaBoost(float duration)
+    {
+        CurrentStamina = MaxStamina;
+        UpdateStaminaBar();
+        CanRegenerateStamina = false;
+        isStaminaBoosted = true;
+        yield return new WaitForSeconds(duration);
+
+      
+        isStaminaBoosted = false;
+        CanRegenerateStamina = true;
+        UpdateStaminaBar();
     }
 
     void OnCollisionEnter(Collision collision)

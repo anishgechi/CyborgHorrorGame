@@ -12,6 +12,7 @@ public class InventorySc : MonoBehaviour
     public GameObject InventoryMenu;
     public Transform PositionToDrop;
 
+
     [Header("Selected Items")]
     private ItemSlot ItemSelected;
     private int ItemIndex;
@@ -31,6 +32,8 @@ public class InventorySc : MonoBehaviour
 
     private Movement PlayerMovement;
 
+    public float StaminUpTimer = 4.5f;
+   
     private void Awake()
     {
         Instance = this;
@@ -189,7 +192,19 @@ public class InventorySc : MonoBehaviour
 
     public void OnUseButton() 
     {
-    
+        if (ItemSelected.Item.ItemsType == ItemType.Consumable) 
+        {
+            for (int v = 0; v < ItemSelected.Item.consumable.Length; v++) 
+            {
+                switch (ItemSelected.Item.consumable[v].Type) 
+                {
+                    case ConsumableType.Stamina:
+                        StartCoroutine(PlayerMovement.TemporaryStaminaBoost(StaminUpTimer));
+                        break;
+                }
+            }
+        }
+        RemoveSelectedItem(); 
     }
 
     public void OnEquipButton() 

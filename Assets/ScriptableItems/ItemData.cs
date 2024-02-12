@@ -11,6 +11,12 @@ public enum ItemType
     Lore
 }
 
+public enum ConsumableType 
+{
+    Power,
+    Stamina
+}
+
 [CreateAssetMenu(fileName = "Item", menuName = "New Item")]
 public class ItemData : ScriptableObject
 {
@@ -26,6 +32,8 @@ public class ItemData : ScriptableObject
     public int MaxStack;
 
 
+    [Header("Cosnumable")]
+    public ConsumableData[] consumable;
 
     // Start is called before the first frame update
     void Start()
@@ -38,4 +46,10 @@ public class ItemData : ScriptableObject
     {
         
     }
+}
+[System.Serializable]
+public class ConsumableData 
+{
+    public ConsumableType Type;
+    public float value;
 }
