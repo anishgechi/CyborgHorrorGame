@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7615712109881010000}
   - component: {fileID: 6543361665363195637}
   - component: {fileID: 6788471962603806841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 2858807823991511803}
   - component: {fileID: 905391269631417912}
   - component: {fileID: 5928226417795619573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 541135997942355492}
   - component: {fileID: 6242641147398369655}
   - component: {fileID: 1487569452501437403}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Battery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.1319, y: 0.523, z: -1.54}
-  m_LocalScale: {x: 0.029995993, y: 0.029995993, z: 0.029995993}
+  m_LocalScale: {x: 0.0940707, y: 0.0940707, z: 0.0940707}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3399063025438525515}
@@ -318,10 +318,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 0.569788
+  m_Height: 3.055175
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.00000006209647, y: 0.17313042, z: 0.06978774}
 --- !u!114 &6242641147398369655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 2361966761598411271}
   - component: {fileID: 1454396844525548327}
   - component: {fileID: 7753637281288120616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,6 +466,6 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5000001
-  m_Height: 2
+  m_Height: 2.8520877
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.00000006209647, y: 0.19174495, z: -0.000000093144706}

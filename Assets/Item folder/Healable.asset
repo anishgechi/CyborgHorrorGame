@@ -16,6 +16,6 @@ MonoBehaviour:
   ItemDesc: wow some bandages
   ItemsType: 1
   ItemIcon: {fileID: 21300000, guid: d2793c8c5f78ada4b873d2782af1982f, type: 3}
-  Prefab: {fileID: 0}
+  Prefab: {fileID: 1837619051092509355, guid: e3e9e02fdff397443a0115b778774206, type: 3}
   CanStack: 1
   MaxStack: 99

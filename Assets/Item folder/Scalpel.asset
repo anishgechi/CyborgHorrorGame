@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ff29977d95dfcf4fb5822e6a00e311a, type: 3}
-  m_Name: Tazer
+  m_Name: Scalpel
   m_EditorClassIdentifier: 
-  ItemName: Tazer
+  ItemName: Scalpel
   ItemDesc: This should stop them...
   ItemsType: 0
-  ItemIcon: {fileID: 21300000, guid: bddeff25e02857e4784eedc0c7a0f12f, type: 3}
-  Prefab: {fileID: 0}
+  ItemIcon: {fileID: 21300000, guid: 99f492ee2c4287d42a8b07f3c404062e, type: 3}
+  Prefab: {fileID: 8950775555730525681, guid: 43d01a6508cae6c47985b43e537d94d6, type: 3}
   CanStack: 0
   MaxStack: 0
