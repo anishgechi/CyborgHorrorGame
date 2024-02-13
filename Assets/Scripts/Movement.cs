@@ -17,9 +17,12 @@ public class Movement : MonoBehaviour
     [SerializeField] float CurrentStamina; 
     [SerializeField] float MaxStamina = 100f; 
     [SerializeField] float CrouchHeight = 0.5f; 
-    [SerializeField] float StandingHeight = 1.0f; 
+    [SerializeField] float StandingHeight = 1.0f;
 
 
+    public bool IsAudible = false;
+    public AudioClip[] FootStepFXList;
+    public AudioSource FootStepFX;
     public Image PlayerStaminaBar; 
     private Rigidbody RB; 
     private CapsuleCollider PlayersCapsule; 
@@ -29,6 +32,7 @@ public class Movement : MonoBehaviour
     private bool canStartRegeneration = true; 
     private bool IsCrouching = false;
     private bool CanLook = true;
+    private bool isStaminaBoosted = false;
 
 
     [Header("Look Variables")]
@@ -50,6 +54,7 @@ public class Movement : MonoBehaviour
         PlayerJump();
         CrouchToggled();
         PlayerMovement();
+        PlayFootStepSound();
     }
 
     void FixedUpdate()
@@ -75,8 +80,6 @@ public class Movement : MonoBehaviour
         CameraOBJ.localEulerAngles = new Vector3(-CamCurrentXrotation, 0, 0); 
         transform.eulerAngles += new Vector3(0, MouseDelta.x * LookSens, 0);
     }
-
-    private bool isStaminaBoosted = false;
 
     void PlayerMovement()
     {
@@ -111,7 +114,6 @@ public class Movement : MonoBehaviour
             verticalInput = 1f;
             WalkSpeed = SprintSpeed;
 
-            // Check if stamina is temporarily boosted
             if (!isStaminaBoosted)
             {
                 DecreaseStamina(Time.deltaTime);
@@ -127,7 +129,7 @@ public class Movement : MonoBehaviour
         {
             StartCoroutine(DelayStaminaRegeneration());
         }
-        else if (CanRegenerateStamina && !isStaminaBoosted) // Regenerate stamina only if not boosted
+        else if (CanRegenerateStamina && !isStaminaBoosted) 
         {
             RegenerateStamina(Time.deltaTime);
         }
@@ -218,6 +220,25 @@ public class Movement : MonoBehaviour
         isStaminaBoosted = false;
         CanRegenerateStamina = true;
         UpdateStaminaBar();
+    }
+
+    public void PlayFootStepSound()
+    {
+        if (IsMoving && !IsCrouching)
+        {
+            if (!FootStepFX.isPlaying)
+            {
+                int randomIndex = Random.Range(0, FootStepFXList.Length);
+                FootStepFX.clip = FootStepFXList[randomIndex];
+                FootStepFX.Play();
+                IsAudible = true;
+            }
+        }
+        else
+        {
+            FootStepFX.Stop();
+            IsAudible = false;
+        }
     }
 
     void OnCollisionEnter(Collision collision)
