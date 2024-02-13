@@ -20,6 +20,8 @@ public class Movement : MonoBehaviour
     [SerializeField] float StandingHeight = 1.0f;
 
 
+    public bool IsSprinting = false;
+    public bool IsMoving = false;
     public bool IsAudible = false;
     public AudioClip[] FootStepFXList;
     public AudioSource FootStepFX;
@@ -27,7 +29,6 @@ public class Movement : MonoBehaviour
     private Rigidbody RB; 
     private CapsuleCollider PlayersCapsule; 
     private bool CanJump = false; 
-    private bool IsMoving = false; 
     private bool CanRegenerateStamina = true; 
     private bool canStartRegeneration = true; 
     private bool IsCrouching = false;
@@ -83,7 +84,9 @@ public class Movement : MonoBehaviour
 
     void PlayerMovement()
     {
-        IsMoving = (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)));
+        IsSprinting = (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W) && CurrentStamina > 0);
+        IsMoving = (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || IsSprinting || Input.GetKeyDown(KeyCode.Space));
+        
         float horizontalInput = 0f;
         float verticalInput = 0f;
 
@@ -109,7 +112,7 @@ public class Movement : MonoBehaviour
         {
             WalkSpeed = CrouchSpeed;
         }
-        else if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W) && CurrentStamina > 0)
+        else if (IsSprinting)
         {
             verticalInput = 1f;
             WalkSpeed = SprintSpeed;
