@@ -11,7 +11,7 @@ public class SanityKiller : MonoBehaviour
     [SerializeField] float CurrentSanity = 100f;
     [SerializeField] float SanityDecreaseRate = 5.5f;
     [SerializeField] float DetectionRadius = 10f;
-    
+
     public LayerMask PlayerLayer;
     public bool IsPlayerDetected = false;
     public Image SanityBar;
@@ -23,10 +23,18 @@ public class SanityKiller : MonoBehaviour
 
     public CamBob Bob;
 
+    [Header("Field of View settings")]
+    [SerializeField] float MinFOV = 60f;
+    [SerializeField] float MaxFOV = 110f;
+    [SerializeField] float FOVChangeRate = 1f;
+
+    private float TargetFOV;
+
     // Start is called before the first frame update
     void Start()
     {
         UpdateSanityBar();
+        TargetFOV = PLMainCamera.fieldOfView;
     }
 
     // Update is called once per frame
@@ -35,8 +43,11 @@ public class SanityKiller : MonoBehaviour
         if (IsPlayerDetected)
         {
             CurrentSanity -= SanityDecreaseRate * Time.deltaTime;
+            CurrentSanity = Mathf.Max(CurrentSanity, 0f);
             UpdateSanityBar();
         }
+
+        UpdateFOV();
 
         if (CurrentSanity != MaxSanity)
         {
@@ -88,12 +99,19 @@ public class SanityKiller : MonoBehaviour
         float offsetY = Mathf.PerlinNoise(0, Time.time * ShakeFrequency) * shakeIntensity;
         PLMainCamera.transform.localPosition = new Vector3(offsetX, offsetY, PLMainCamera.transform.localPosition.z);
     }
+
+    void UpdateFOV()
+    {
+        if (CurrentSanity < 60f)
+        {
+            float normalizedSanity = Mathf.Clamp01((CurrentSanity - MinSanity) / (60f - MinSanity));
+            float targetFOV = Mathf.Lerp(MinFOV, MaxFOV, 1f - normalizedSanity);
+
+            PLMainCamera.fieldOfView = Mathf.Lerp(PLMainCamera.fieldOfView, targetFOV, Time.deltaTime * FOVChangeRate);
+        }
+        else
+        {
+            PLMainCamera.fieldOfView = Mathf.Lerp(PLMainCamera.fieldOfView, MinFOV, Time.deltaTime * FOVChangeRate);
+        }
+    }
 }
-
-
-
-
-
-
-
-
