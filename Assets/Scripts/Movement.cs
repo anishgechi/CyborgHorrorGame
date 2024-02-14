@@ -19,13 +19,16 @@ public class Movement : MonoBehaviour
     [SerializeField] float CrouchHeight = 0.5f; 
     [SerializeField] float StandingHeight = 1.0f;
 
-
+    [Header("BoolCheckers")]
     public bool IsSprinting = false;
     public bool IsMoving = false;
     public bool IsAudible = false;
+
+    [Header("UI and Audio")]
     public AudioClip[] FootStepFXList;
     public AudioSource FootStepFX;
     public Image PlayerStaminaBar; 
+    
     private Rigidbody RB; 
     private CapsuleCollider PlayersCapsule; 
     private bool CanJump = false; 

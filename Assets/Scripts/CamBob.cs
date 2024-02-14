@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class CamBob : MonoBehaviour
 {
-    public Transform PlayerTransform;
-    public float BobAmount = 0.11f;
-    public float BobSpeed = 7.5f;
-    public float SprintingBobSpeed = 20f; 
-    public float ReturnOffsetSpeed = 3f;
+    [Header("CameraBobbing settings")]
+    [SerializeField] Transform PlayerTransform;
+    [SerializeField] float BobAmount = 0.11f;
+    [SerializeField] float BobSpeed = 7.5f;
+    [SerializeField] float SprintingBobSpeed = 20f; 
+    [SerializeField] float ReturnOffsetSpeed = 3f;
 
     private Vector3 OriginalPosition;
     private bool isMoving;
