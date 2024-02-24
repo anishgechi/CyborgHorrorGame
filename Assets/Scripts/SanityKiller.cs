@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 
 public class SanityKiller : MonoBehaviour
@@ -11,6 +12,11 @@ public class SanityKiller : MonoBehaviour
     [SerializeField] float CurrentSanity = 100f;
     [SerializeField] float SanityDecreaseRate = 5.5f;
     [SerializeField] float DetectionRadius = 10f;
+    [SerializeField] float VignetteMaxVal = 0.33f;
+
+    public PostProcessVolume PPV;
+    Vignette vignette;
+    Grain grain;
 
     public LayerMask PlayerLayer;
     public bool IsPlayerDetected = false;
@@ -35,6 +41,8 @@ public class SanityKiller : MonoBehaviour
     {
         UpdateSanityBar();
         TargetFOV = PLMainCamera.fieldOfView;
+        PPV.profile.TryGetSettings(out vignette);
+        PPV.profile.TryGetSettings(out grain);
     }
 
     // Update is called once per frame
@@ -62,6 +70,8 @@ public class SanityKiller : MonoBehaviour
         {
             Bob.enabled = true;
         }
+    
+        UpdatePostProcessingEffects();
     }
 
     void UpdateSanityBar()
@@ -99,6 +109,28 @@ public class SanityKiller : MonoBehaviour
         float offsetY = Mathf.PerlinNoise(0, Time.time * ShakeFrequency) * shakeIntensity;
         PLMainCamera.transform.localPosition = new Vector3(offsetX, offsetY, PLMainCamera.transform.localPosition.z);
     }
+
+    void UpdatePostProcessingEffects()
+    {
+        float normalizedSanity = 1f - (CurrentSanity - MinSanity) / (MaxSanity - MinSanity);
+
+        vignette.intensity.value = Mathf.Lerp(0f, VignetteMaxVal, normalizedSanity);
+
+        float minGrainIntensity = 0.1f;
+        float maxGrainIntensity = 0.5f;
+        float randomOffset = Random.Range(-0.2f, 0.2f);
+
+        if (CurrentSanity == MaxSanity)
+        {
+            grain.intensity.value = 0f;
+        }
+        else
+        {
+            float targetGrainIntensity = Mathf.Lerp(minGrainIntensity, maxGrainIntensity, normalizedSanity) + randomOffset;
+            grain.intensity.value = Mathf.Max(targetGrainIntensity, minGrainIntensity);
+        }
+    }
+
 
     void UpdateFOV()
     {

@@ -84,11 +84,11 @@ public class InteractionManagement : MonoBehaviour
 
         if (CurrentIntereacted != null)
         {
-            PromptText.text = string.Format("<b>[E]<b>{0}", CurrentIntereacted.GetInteractionPrompt());
+            PromptText.text = string.Format("<b>[E]<b> {0}", CurrentIntereacted.GetInteractionPrompt());
         }
         else
         {
-            PromptText.text = "<b>[E]<b>Interact";
+            PromptText.text = "<b>[E]<b> Interact";
         }
     }
 
