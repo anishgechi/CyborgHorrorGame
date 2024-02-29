@@ -1,0 +1,259 @@
+fileFormatVersion: 2
+guid: d0cada9d3da482648a7139647f568d12
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mouth
+    second: {fileID: 2100000, guid: 14753aef339a35c4f9e9a2522223ce5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: 19ae7f4ee303b674db60332612e94054, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teeth
+    second: {fileID: 2100000, guid: 16172c8c507a41f408859179f23dfba2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface5
+    second: {fileID: 2100000, guid: 5e43bf96341428d4aa33bd581aa7fd90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: 4af7045ac82fd6c4b9a39115c03a7b9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tongue
+    second: {fileID: 2100000, guid: f89bf9ab2ba6c3a4891b1e4193eb905d, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerEyes_Default_Material_BaseColor.1001
+    second: {fileID: 2800000, guid: aec5e82824ed2f24c9f982a6ddee3c22, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerEyes_Default_Material_Metallic.1001
+    second: {fileID: 2800000, guid: b4f09b47fa62b47498177f60c8b701e7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerEyes_Default_Material_Normal.1001
+    second: {fileID: 2800000, guid: 521fb9e17dac1b440b4940c6b0628abe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerEyes_Default_Material_Roughness.1001
+    second: {fileID: 2800000, guid: 436da79b02d56b9409130a9b4543e78b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerEyes_standardSurface1_BaseColor.1001
+    second: {fileID: 2800000, guid: 045672e2592bbf243906a8f850ca9632, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerEyes_standardSurface1_Metallic.1001
+    second: {fileID: 2800000, guid: 3b4784746dbbf444b9c7fdb1e0e43711, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerEyes_standardSurface1_Normal.1001
+    second: {fileID: 2800000, guid: 0a3516912594edf4681c7f6d0ef16591, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerEyes_standardSurface1_Roughness.1001
+    second: {fileID: 2800000, guid: b33f712992fcea940a3024ca2dc675b1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_Mouth_BaseColor.1001
+    second: {fileID: 2800000, guid: d5561da8b6b3f7d4a9dcd23d79aefc05, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_Mouth_Metallic.1001
+    second: {fileID: 2800000, guid: 66c587977e561c7439ba1920b58e6d6d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_Mouth_Normal.1001
+    second: {fileID: 2800000, guid: 432a8fa680fdd9447b581b9aa987594f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_Mouth_Roughness.1001
+    second: {fileID: 2800000, guid: 653413a5107a3ac47a7105b8574a6ba1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_Teeth_BaseColor.1001
+    second: {fileID: 2800000, guid: 42a431a7e65440e4195e81eb4552986e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_Teeth_Metallic.1001
+    second: {fileID: 2800000, guid: f5a31b40530b9054b934669dd87dff66, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_Teeth_Normal.1001
+    second: {fileID: 2800000, guid: 879285cca65bef14bb54ac1836eff3c9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_Teeth_Roughness.1001
+    second: {fileID: 2800000, guid: 262e89aa4f5f7ec43bfb1b378d55c507, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_lambert2_BaseColor.1001
+    second: {fileID: 2800000, guid: b24d0d5d03495114aab9a9a6ee06864f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_lambert2_Metallic.1001
+    second: {fileID: 2800000, guid: 5604ffba85c65ad4d841995710527d8b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_lambert2_Normal.1001
+    second: {fileID: 2800000, guid: 3ee0c842f82a0c84d81525a57ef092f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_lambert2_Roughness.1001
+    second: {fileID: 2800000, guid: bdb1bdffa2770944ea91c0ebdafd3825, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_tongue_BaseColor.1001
+    second: {fileID: 2800000, guid: aa164e31d4f302e4591133af4716e0bf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_tongue_Metallic.1001
+    second: {fileID: 2800000, guid: 1cc71a07d0ade0e4fa718d568574a630, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_tongue_Normal.1001
+    second: {fileID: 2800000, guid: 5b06fdb2e11363b4d8bb631ac54bb41a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CrawlerLowpoly_tongue_Roughness.1001
+    second: {fileID: 2800000, guid: 4cf45c72081eb7b489e8168e46d29c02, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
