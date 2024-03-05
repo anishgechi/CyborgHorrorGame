@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ff29977d95dfcf4fb5822e6a00e311a, type: 3}
-  m_Name: Scalpel
+  m_Name: Walkman
   m_EditorClassIdentifier: 
-  ItemName: Scalpel
-  ItemDesc: This should stop them...
+  ItemName: Walkman
+  ItemDesc: The calm before the storm
   ItemsType: 0
-  ItemIcon: {fileID: 21300000, guid: 99f492ee2c4287d42a8b07f3c404062e, type: 3}
-  Prefab: {fileID: 8950775555730525681, guid: 43d01a6508cae6c47985b43e537d94d6, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 2b48bd5a80ab0384fb55a02a0747c076, type: 3}
+  Prefab: {fileID: 8827134091127638712, guid: 833a5f571f34dcc4fa70d2e765ebfe95, type: 3}
   CanStack: 0
   MaxStack: 0
   consumable: []
-  EquipPrefab: {fileID: 8950775555730525681, guid: 43d01a6508cae6c47985b43e537d94d6, type: 3}
+  EquipPrefab: {fileID: 8827134091127638712, guid: 833a5f571f34dcc4fa70d2e765ebfe95, type: 3}

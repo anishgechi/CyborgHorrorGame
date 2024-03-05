@@ -17,7 +17,7 @@ TagManager:
   - Ground
   - Interactable
   - Enemy
-  - 
+  - Equip
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: New Layer 1
+    uniqueID: 512560127
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

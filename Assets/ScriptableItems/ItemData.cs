@@ -35,6 +35,9 @@ public class ItemData : ScriptableObject
     [Header("Cosnumable")]
     public ConsumableData[] consumable;
 
+    [Header("Equip items")]
+    public GameObject EquipPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
