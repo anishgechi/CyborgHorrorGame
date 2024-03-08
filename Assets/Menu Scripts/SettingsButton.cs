@@ -6,6 +6,9 @@ using UnityEngine.EventSystems;
 
 public class SettingsButton : MonoBehaviour, IPointerClickHandler, IPointerExitHandler
 {
+    public GameObject MainMenuPanel; 
+    public GameObject SettingsPanel; 
+
     private TMP_Text buttonText;
     private Color originalColor;
     private FontStyles originalFontStyle;
@@ -26,9 +29,11 @@ public class SettingsButton : MonoBehaviour, IPointerClickHandler, IPointerExitH
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        MainMenuPanel.SetActive(false);
+        SettingsPanel.SetActive(true);
+
         buttonText.color = Color.red;
         buttonText.fontStyle |= FontStyles.Bold;
-        buttonText.fontStyle |= FontStyles.Strikethrough;
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -37,3 +42,4 @@ public class SettingsButton : MonoBehaviour, IPointerClickHandler, IPointerExitH
         buttonText.fontStyle = originalFontStyle;
     }
 }
+

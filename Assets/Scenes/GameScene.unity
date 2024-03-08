@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 30033813}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 173603460}
   m_Layer: 5
   m_Name: Equip Button
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 256580651}
   m_Layer: 5
   m_Name: info txt
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2073,7 +2073,7 @@ GameObject:
   - component: {fileID: 730676908}
   m_Layer: 5
   m_Name: Use Button
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2216,7 +2216,7 @@ GameObject:
   - component: {fileID: 782121049}
   m_Layer: 5
   m_Name: Lore
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2350,7 +2350,7 @@ GameObject:
   - component: {fileID: 820343083}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2484,7 +2484,7 @@ GameObject:
   - component: {fileID: 821722829}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2831,7 +2831,7 @@ GameObject:
   - component: {fileID: 992529705}
   m_Layer: 5
   m_Name: inv text
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2965,7 +2965,7 @@ GameObject:
   - component: {fileID: 1031196145}
   m_Layer: 5
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3420,7 +3420,7 @@ GameObject:
   - component: {fileID: 1583825728}
   m_Layer: 5
   m_Name: Inventory
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3500,7 +3500,7 @@ GameObject:
   - component: {fileID: 1665741974}
   m_Layer: 5
   m_Name: Un-Equip Button
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3669,7 +3669,7 @@ GameObject:
   - component: {fileID: 1814313794}
   m_Layer: 5
   m_Name: item name
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4077,7 +4077,7 @@ GameObject:
   - component: {fileID: 2101022398}
   m_Layer: 5
   m_Name: Drop Button
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4209,7 +4209,7 @@ GameObject:
   - component: {fileID: 2126747720}
   m_Layer: 5
   m_Name: TextPrompt
-  m_TagString: Untagged
+  m_TagString: FontTagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
