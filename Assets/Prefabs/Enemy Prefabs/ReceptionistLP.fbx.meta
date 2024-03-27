@@ -1,0 +1,269 @@
+fileFormatVersion: 2
+guid: 6500ba3c5ef92604596259b7f7f18f8b
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyesReceptionist1
+    second: {fileID: 2100000, guid: 96064a2a290eb844dbeb86a3339b305d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HairReceptionist
+    second: {fileID: 2100000, guid: 9203e2820ee62ed4cbd964972ed9a98d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Receptionist2
+    second: {fileID: 2100000, guid: 1bfcb915032b0a2468e041e33fef5fa6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShirtReceptionist
+    second: {fileID: 2100000, guid: fd4d92f2d34210d4f8e2f9d8247cbabc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShoesReceptionist
+    second: {fileID: 2100000, guid: fcefb767d40b9e24aa5fe568edbabea4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SkinReceptionist
+    second: {fileID: 2100000, guid: dba2fa8a0137d9e4aa189d687dd55f46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TrousersReceptionist
+    second: {fileID: 2100000, guid: f3ae09acf99146341acfb1fca948bfe8, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_EyesReceptionist1_BaseColor.1001
+    second: {fileID: 2800000, guid: 1caec4fe7f524fd4fb0e3238f0860886, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_EyesReceptionist1_Metalness.1001
+    second: {fileID: 2800000, guid: 10ead65157bedd54b809b0c08cfd0ad5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_EyesReceptionist1_Normal.1001
+    second: {fileID: 2800000, guid: 9de2b40cc3540c04ca2fe516b76b66a4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_EyesReceptionist1_Roughness.1001
+    second: {fileID: 2800000, guid: 54e0600f71f1dc9489fd01a42b1dff2b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_HairReceptionist_BaseColor.1001
+    second: {fileID: 2800000, guid: b67e3a2589d8e2742a6bfe913ab7f6be, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_HairReceptionist_Metalness.1001
+    second: {fileID: 2800000, guid: a9d193c7d13be5d4abff576e01de55f4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_HairReceptionist_Normal.1001
+    second: {fileID: 2800000, guid: 1c758f98ce53991438eec4e06aa53b3c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_HairReceptionist_Roughness.1001
+    second: {fileID: 2800000, guid: 7723a1e8ab1c78742abd93fc69523027, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_Receptionist2_BaseColor.1001
+    second: {fileID: 2800000, guid: 37d472f1f4dfdf540b5f105cd5f28658, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_ShirtReceptionist_BaseColor.1001
+    second: {fileID: 2800000, guid: 4b4f822932d40134a874a1740ae70e99, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_ShirtReceptionist_Metalness.1001
+    second: {fileID: 2800000, guid: 5b09717b06b59ff4e8334e78bbc04653, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_ShirtReceptionist_Normal.1001
+    second: {fileID: 2800000, guid: d50cc0f6da12b59418d13e6a1ba68016, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_ShirtReceptionist_Roughness.1001
+    second: {fileID: 2800000, guid: 29393216a1b47f14aa24109f0f2153c2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_ShoesReceptionist_BaseColor.1001
+    second: {fileID: 2800000, guid: 7d7151d06f1716241ba6504312262978, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_ShoesReceptionist_Metalness.1001
+    second: {fileID: 2800000, guid: 85e7e38104becff44abe1deafe47c8ee, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_ShoesReceptionist_Normal.1001
+    second: {fileID: 2800000, guid: fd01489180f18b640a457a5e09db0835, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_ShoesReceptionist_Roughness.1001
+    second: {fileID: 2800000, guid: 18302d844d3feaf49bbb7f26e01fa9fc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_SkinReceptionist_BaseColor.1001
+    second: {fileID: 2800000, guid: 6d35d3ef96c84b548a3e30b3c4f7a0c3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_SkinReceptionist_Metalness.1001
+    second: {fileID: 2800000, guid: 4df61702af787044face000732dfaecd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_SkinReceptionist_Normal.1001
+    second: {fileID: 2800000, guid: 5540752699dc3a24ca4be8a1a246df5f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_SkinReceptionist_Roughness.1001
+    second: {fileID: 2800000, guid: be5d0788a4a31064791467ab0618e32d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_TrousersReceptionist_BaseColor.1001
+    second: {fileID: 2800000, guid: 28f1e1d614c8d46428b7e2d757586e5f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_TrousersReceptionist_Metalness.1001
+    second: {fileID: 2800000, guid: 94871cf507bcbe34d807d73745d83809, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_TrousersReceptionist_Normal.1001
+    second: {fileID: 2800000, guid: bf0292a1a95f2904d89f23936278fe5e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ReceptionistLowPoly_TrousersReceptionist_Roughness.1001
+    second: {fileID: 2800000, guid: 5087c7f11aef26a4e82b38a6243b5c61, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
