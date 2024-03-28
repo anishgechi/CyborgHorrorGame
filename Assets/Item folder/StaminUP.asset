@@ -15,10 +15,11 @@ MonoBehaviour:
   ItemName: StaminUP Pills
   ItemDesc: Damn, this will give me a boost
   ItemsType: 1
-  ItemIcon: {fileID: 21300000, guid: e29038e570a55fc4da6f3e08b7081b2e, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 32694185f361d3346a5e0cf3af8f2345, type: 3}
   Prefab: {fileID: 1301065856900420562, guid: f10add945ec3e3c4aa4ed25e1126555d, type: 3}
   CanStack: 1
   MaxStack: 99
   consumable:
   - Type: 1
     value: 0
+  EquipPrefab: {fileID: 0}

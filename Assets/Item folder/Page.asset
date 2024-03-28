@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Page
   m_EditorClassIdentifier: 
   ItemName: Page
-  ItemDesc: you dont have much time...
+  ItemDesc: My Daughters drawings?
   ItemsType: 3
-  ItemIcon: {fileID: 21300000, guid: d61949c04c83e7e4db5d29822ffb9295, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 1deeb02b367661548bed306d28427f1e, type: 3}
   Prefab: {fileID: 0}
-  CanStack: 0
-  MaxStack: 0
+  CanStack: 1
+  MaxStack: 6
+  consumable: []
+  EquipPrefab: {fileID: 0}

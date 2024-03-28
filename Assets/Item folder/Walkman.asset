@@ -15,7 +15,7 @@ MonoBehaviour:
   ItemName: Walkman
   ItemDesc: The calm before the storm
   ItemsType: 0
-  ItemIcon: {fileID: 21300000, guid: 2b48bd5a80ab0384fb55a02a0747c076, type: 3}
+  ItemIcon: {fileID: 21300000, guid: 6dda42bf5dd476d47917c6cf72cbc324, type: 3}
   Prefab: {fileID: 8827134091127638712, guid: 833a5f571f34dcc4fa70d2e765ebfe95, type: 3}
   CanStack: 0
   MaxStack: 0
