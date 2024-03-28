@@ -836,6 +836,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f330b145e0edb304d94545738e98ec6c, type: 2}
   - {fileID: 11400000, guid: b2ca21a426dbabc4aa0ea18604314094, type: 2}
   - {fileID: 11400000, guid: 76e85723cb4c93147b6b0331875e81d4, type: 2}
+  - {fileID: 11400000, guid: ced0a5b5f33f7fe428e1d61a51766c54, type: 2}
   TargetTag: FontTagged
 --- !u!1 &445342724
 GameObject:
@@ -5564,6 +5565,8 @@ MonoBehaviour:
     - m_Text: Dyslexic friendly
       m_Image: {fileID: 0}
     - m_Text: Avara
+      m_Image: {fileID: 0}
+    - m_Text: Enigmatic
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
