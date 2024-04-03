@@ -29,11 +29,23 @@ public class EquipManager : MonoBehaviour
     public void EquipItem(ItemData item) 
     {
         UnEquipItem();
+        CurrentEquip = Instantiate(item.EquipPrefab, EquipParent).GetComponent<Equip>();
+    }
+
+
+    public void EquipNew(ItemData item)
+    {
+        UnEquipItem();
+        CurrentEquip = Instantiate(item.EquipPrefab, EquipParent).GetComponent<Equip>();
     }
 
     public void UnEquipItem() 
     {
-        
+        if (CurrentEquip != null) 
+        {
+            Destroy(CurrentEquip.gameObject);
+            CurrentEquip = null;
+        }
     }
 }
 

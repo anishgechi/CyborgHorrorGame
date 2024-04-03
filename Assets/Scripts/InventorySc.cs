@@ -209,12 +209,21 @@ public class InventorySc : MonoBehaviour
 
     public void OnEquipButton() 
     {
-    
+        if (ItemUISlots[CurrentEquipIndex].CurrentlyEquipped) 
+        {
+            Unequip(CurrentEquipIndex);
+        }
+
+        ItemUISlots[ItemIndex].CurrentlyEquipped = true;
+        CurrentEquipIndex = ItemIndex;
+        EquipManager.Instance.EquipNew(ItemSelected.Item);
+        UpdateUI();
+        SelectItem(ItemIndex);
     }
 
     public void OnUnEquipButton() 
     {
-    
+        Unequip(ItemIndex);
     }
 
     public void OnDropButton() 
@@ -225,7 +234,14 @@ public class InventorySc : MonoBehaviour
 
     void Unequip(int index)
     {
-        
+        ItemUISlots[index].CurrentlyEquipped = false;
+        EquipManager.Instance.UnEquipItem();
+        UpdateUI();
+
+        if(ItemIndex == index) 
+        {
+            SelectItem(index);
+        }
     }
 
     void RemoveSelectedItem() 
