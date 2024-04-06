@@ -16,8 +16,8 @@ MonoBehaviour:
   ItemDesc: The calm before the storm
   ItemsType: 0
   ItemIcon: {fileID: 21300000, guid: 6dda42bf5dd476d47917c6cf72cbc324, type: 3}
-  Prefab: {fileID: 6703438890948657412, guid: 8bf1f9105cc124347b6e56336939ff17, type: 3}
+  Prefab: {fileID: 4983481775620198623, guid: 8bf1f9105cc124347b6e56336939ff17, type: 3}
   CanStack: 0
   MaxStack: 0
   consumable: []
-  EquipPrefab: {fileID: 1588806011327941731, guid: 80f25c062b1f77a4f838bedf4cda97ad, type: 3}
+  EquipPrefab: {fileID: 3815377383885156944, guid: 80f25c062b1f77a4f838bedf4cda97ad, type: 3}
