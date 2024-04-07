@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: -774670891342993717}
   m_Layer: 10
   m_Name: EquipScalpal
-  m_TagString: Untagged
+  m_TagString: Scalpel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

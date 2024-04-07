@@ -55,31 +55,49 @@ public class InventorySc : MonoBehaviour
         ClearSelectedItemWindow();
     }
 
+    private int currentEquipIndex = -1;
+
     public void OpenTheMenuButton()
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
             ToggleMenu();
+
+            if (!MenuIsOpen() && currentEquipIndex != -1)
+            {
+                PlayerPrefs.SetInt("CurrentEquipIndex", currentEquipIndex);
+                PlayerPrefs.Save();
+            }
         }
     }
 
-    public void ToggleMenu() 
+    public void ToggleMenu()
     {
-        if (InventoryMenu.activeInHierarchy) 
+        if (InventoryMenu.activeInHierarchy)
         {
             InventoryMenu.SetActive(false);
             InventoryClose.Invoke();
             PlayerMovement.ToggleCursor(false);
         }
-        else 
+        else
         {
             InventoryMenu.SetActive(true);
             InventoryOpen.Invoke();
-            ClearSelectedItemWindow ();
+            ClearSelectedItemWindow();
             PlayerMovement.ToggleCursor(true);
-        }
 
+            for (int i = 0; i < ItemUISlots.Length; i++)
+            {
+                if (ItemUISlots[i].CurrentlyEquipped)
+                {
+                    CurrentEquipIndex = i;
+                    break;
+                }
+            }
+        }
     }
+
+
 
     public bool MenuIsOpen() 
     {
@@ -160,14 +178,15 @@ public class InventorySc : MonoBehaviour
         return null;
     }
 
-    public void SelectItem(int index) 
+    public void SelectItem(int index)
     {
-        if (InventorySlots[index].Item == null) 
+        if (InventorySlots[index].Item == null)
         {
             return;
         }
-        
+
         ItemSelected = InventorySlots[index];
+        ItemIndex = index; 
         CurrentEquipIndex = index;
         SelectedItemName.text = ItemSelected.Item.ItemName;
         SelectedItemDesc.text = ItemSelected.Item.ItemDesc;
@@ -177,6 +196,7 @@ public class InventorySc : MonoBehaviour
         UnEquipButton.SetActive(ItemSelected.Item.ItemsType == ItemType.Equipable && ItemUISlots[index].CurrentlyEquipped);
         DropButton.SetActive(true);
     }
+
 
     public void ClearSelectedItemWindow() 
     {
@@ -207,18 +227,27 @@ public class InventorySc : MonoBehaviour
         RemoveSelectedItem(); 
     }
 
-    public void OnEquipButton() 
+    public void OnEquipButton()
     {
-        if (ItemUISlots[CurrentEquipIndex].CurrentlyEquipped) 
-        {
-            Unequip(CurrentEquipIndex);
-        }
 
-        ItemUISlots[ItemIndex].CurrentlyEquipped = true;
-        CurrentEquipIndex = ItemIndex;
-        EquipManager.Instance.EquipNew(ItemSelected.Item);
-        UpdateUI();
-        SelectItem(ItemIndex);
+        if (ItemUISlots[ItemIndex].CurrentlyEquipped)
+        {
+            Unequip(ItemIndex);
+        }
+        else
+        {
+            if (CurrentEquipIndex != -1)
+            {
+                Unequip(CurrentEquipIndex);
+            }
+
+            ItemUISlots[ItemIndex].CurrentlyEquipped = true;
+            CurrentEquipIndex = ItemIndex;
+
+            EquipManager.Instance.EquipNew(ItemSelected.Item);
+            UpdateUI();
+            SelectItem(ItemIndex);
+        }
     }
 
     public void OnUnEquipButton() 
