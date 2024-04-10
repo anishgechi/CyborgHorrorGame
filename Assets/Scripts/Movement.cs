@@ -51,14 +51,17 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CanLook == true) 
+        if (!PauseMenu.GameIsPaused)
         {
-            PlayerLook();
+            if (CanLook == true)
+            {
+                PlayerLook();
+            }
+            PlayerJump();
+            CrouchToggled();
+            PlayerMovement();
+            PlayFootStepSound();
         }
-        PlayerJump();
-        CrouchToggled();
-        PlayerMovement();
-        PlayFootStepSound();
     }
 
     void FixedUpdate()
