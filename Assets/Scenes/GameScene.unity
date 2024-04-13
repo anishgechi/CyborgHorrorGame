@@ -1031,7 +1031,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 23802
+    surfaceParameter: 23848
     meshQueryIndex: 2
     subMeshQueryIndex: 0
     geometryHashValue: -7566191772600577928
@@ -4699,7 +4699,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 164883692}
-  - component: {fileID: 164883693}
   m_Layer: 5
   m_Name: Battery
   m_TagString: Untagged
@@ -4728,21 +4727,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 106}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &164883693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164883691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3e9faa675c444f44965abd07511077e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BatteryBars: {fileID: 303597106}
-  Drainage: 5
-  BatteryPower: 1
 --- !u!1 &170616615
 GameObject:
   m_ObjectHideFlags: 0
@@ -15911,7 +15895,7 @@ MonoBehaviour:
     meshQuery:
       layers: 33554440
       maskAndChannels: 8
-    surfaceParameter: 23802
+    surfaceParameter: 23848
     meshQueryIndex: 2
     subMeshQueryIndex: 0
     geometryHashValue: -7566191772600577928
@@ -28502,7 +28486,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 23716
+    surfaceParameter: 23774
     meshQueryIndex: 0
     subMeshQueryIndex: 0
     geometryHashValue: 742631879326430930
@@ -33599,7 +33583,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 23798
+    surfaceParameter: 23844
     meshQueryIndex: 6
     subMeshQueryIndex: 0
     geometryHashValue: -8418698353304487258
@@ -44305,7 +44289,7 @@ MonoBehaviour:
     meshQuery:
       layers: 16777223
       maskAndChannels: 234881031
-    surfaceParameter: 23738
+    surfaceParameter: 23790
     meshQueryIndex: 1
     subMeshQueryIndex: 0
     geometryHashValue: -528968700153808404
@@ -46589,6 +46573,8 @@ GameObject:
   - component: {fileID: 1875025593011225665}
   - component: {fileID: 1875025593011225666}
   - component: {fileID: 1875025593011225667}
+  - component: {fileID: 1875025593011225668}
+  - component: {fileID: 1875025593011225669}
   m_Layer: 6
   m_Name: 'Player '
   m_TagString: MainCamera
@@ -46829,6 +46815,34 @@ MonoBehaviour:
   CurrentEquip: {fileID: 0}
   EquipParent: {fileID: 222074547}
   walkmanOverlay: {fileID: 2002268844}
+  isWalkmanEquipped: 0
+--- !u!114 &1875025593011225668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875025593011225659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce13fb38c181ad641a6e2181492fedb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1875025593011225669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875025593011225659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e9faa675c444f44965abd07511077e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BatteryBars: {fileID: 303597106}
+  Drainage: 5
+  BatteryPower: 1
 --- !u!1 &1875025593440401712
 GameObject:
   m_ObjectHideFlags: 0

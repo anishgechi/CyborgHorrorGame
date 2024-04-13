@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Batteries
   m_EditorClassIdentifier: 
   ItemName: Batteries
-  ItemDesc: Time to taze these mfs
-  ItemsType: 2
+  ItemDesc: In need if power?
+  ItemsType: 1
   ItemIcon: {fileID: 21300000, guid: db1f689a91431214ea74fc9128b6aa30, type: 3}
   Prefab: {fileID: 6763328532835741346, guid: 28410e5e8bc683348b340f70c0eccdc4, type: 3}
   CanStack: 1
