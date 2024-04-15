@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class SanityKiller : MonoBehaviour
 {
     [Header("Player sanity level settings")]
-    [SerializeField] float MaxSanity = 100f;
+    public float MaxSanity = 100f;
     [SerializeField] float MinSanity = 0f;
-    [SerializeField] float CurrentSanity = 100f;
+    public  float CurrentSanity = 100f;
     [SerializeField] float SanityDecreaseRate = 5.5f;
     [SerializeField] float DetectionRadius = 10f;
     [SerializeField] float VignetteMaxVal = 0.33f;
@@ -74,7 +74,7 @@ public class SanityKiller : MonoBehaviour
         UpdatePostProcessingEffects();
     }
 
-    void UpdateSanityBar()
+    public void UpdateSanityBar()
     {
         SanityBar.fillAmount = Mathf.Clamp01((CurrentSanity - MinSanity) / (MaxSanity - MinSanity));
     }

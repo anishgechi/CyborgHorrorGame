@@ -11,7 +11,7 @@ public class Equip : MonoBehaviour
     private void Start()
     {
         equipManager = EquipManager.Instance;
-        walkman = GetComponent<Walkman>(); // Get the Walkman component
+        walkman = GetComponent<Walkman>(); 
     }
 
     // Update is called once per frame
@@ -25,18 +25,17 @@ public class Equip : MonoBehaviour
                 {
                     Debug.Log("Not playing");
                     isPlaying = false;
-                    walkman.StopDrain(); // Call StopDrain method when not playing
+                    walkman.StopDrain(); 
                 }
                 else
                 {
                     Debug.Log("Playing");
                     isPlaying = true;
-                    walkman.StartDrain(); // Call StartDrain method when playing
+                    walkman.StartDrain(); 
                 }
             }
         }
 
-        // Check if battery power is zero
         if (equipManager.isWalkmanEquipped && walkman.BatteryPower <= 0)
         {
             Debug.Log("Battery depleted. Stopping playback.");
