@@ -9,7 +9,7 @@ public class EquipManager : MonoBehaviour
     public Transform EquipParent;
 
     public GameObject walkmanOverlay;
-    private bool isWalkmanEquipped = false;
+    public bool isWalkmanEquipped = false;
 
     public bool IsWalkmanEquipped => isWalkmanEquipped;
 
@@ -34,31 +34,20 @@ public class EquipManager : MonoBehaviour
     {
         UnEquipItem();
         CurrentEquip = Instantiate(item.EquipPrefab, EquipParent).GetComponent<Equip>();
-        NotifyEquippedItem(CurrentEquip.gameObject.tag);
-        if (CurrentEquip.gameObject.CompareTag("Walkman"))
-        {
-            isWalkmanEquipped = true;
-            walkmanOverlay.SetActive(true);
-        }
+        UpdateWalkmanState();
     }
 
     public void EquipNew(ItemData item)
     {
         UnEquipItem();
         CurrentEquip = Instantiate(item.EquipPrefab, EquipParent).GetComponent<Equip>();
-        NotifyEquippedItem(CurrentEquip.gameObject.tag);
-        if (CurrentEquip.gameObject.CompareTag("Walkman"))
-        {
-            isWalkmanEquipped = true;
-            walkmanOverlay.SetActive(true);
-        }
+        UpdateWalkmanState();
     }
 
     public void UnEquipItem()
     {
         if (CurrentEquip != null)
         {
-            NotifyUnequippedItem(CurrentEquip.gameObject.tag);
             if (CurrentEquip.gameObject.CompareTag("Walkman"))
             {
                 isWalkmanEquipped = false;
@@ -69,16 +58,21 @@ public class EquipManager : MonoBehaviour
         }
     }
 
-    void NotifyEquippedItem(string tag)
+    void UpdateWalkmanState()
     {
-        Debug.Log("Equipped item tag: " + tag);
-    }
-
-    void NotifyUnequippedItem(string tag)
-    {
-        Debug.Log("Unequipped item tag: " + tag);
+        if (CurrentEquip != null && CurrentEquip.gameObject.CompareTag("Walkman"))
+        {
+            isWalkmanEquipped = true;
+            walkmanOverlay.SetActive(true);
+        }
+        else
+        {
+            isWalkmanEquipped = false;
+            walkmanOverlay.SetActive(false);
+        }
     }
 }
+
 
 
 

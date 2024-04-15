@@ -33,6 +33,8 @@ public class InventorySc : MonoBehaviour
     private Movement PlayerMovement;
 
     public float StaminUpTimer = 4.5f;
+
+    public float BatteryRestoreDuration = 2.0f;
    
     private void Awake()
     {
@@ -220,6 +222,13 @@ public class InventorySc : MonoBehaviour
                 {
                     case ConsumableType.Stamina:
                         StartCoroutine(PlayerMovement.TemporaryStaminaBoost(StaminUpTimer));
+                        break;
+                    case ConsumableType.Power:
+                        Walkman walkman = GetComponent<Walkman>();
+                        if( walkman != null) 
+                        {
+                            walkman.OnBatteryUsed(BatteryRestoreDuration);
+                        }
                         break;
                 }
             }
