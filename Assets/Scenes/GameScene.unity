@@ -42020,7 +42020,7 @@ MonoBehaviour:
   WalkSpeed: 5
   SprintSpeed: 10
   CrouchSpeed: 3
-  JumpHeight: 5
+  JumpHeight: 50
   SprintMaxTime: 6
   StaminaRegain: 0.09
   CurrentStamina: 0
