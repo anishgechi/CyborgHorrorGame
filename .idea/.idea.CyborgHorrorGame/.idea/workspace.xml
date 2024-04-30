@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2fokqrTJUpgfPvX8yM1kCqUYFiY" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -51,6 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1714475015641</updated>
       <workItem from="1714475053213" duration="47000" />
+      <workItem from="1714475554057" duration="696000" />
     </task>
     <servers />
   </component>
