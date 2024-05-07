@@ -16,8 +16,8 @@ MonoBehaviour:
   ItemDesc: This should stop them...
   ItemsType: 0
   ItemIcon: {fileID: 21300000, guid: 0d6cc0976786b02489dca4918446bb10, type: 3}
-  Prefab: {fileID: 1651623452923845337, guid: bb55701eb338ddf44bab568e66904b08, type: 3}
+  Prefab: {fileID: 3560365934103915708, guid: 051335ac6399510489f1339105895d80, type: 3}
   CanStack: 0
   MaxStack: 0
   consumable: []
-  EquipPrefab: {fileID: 8907924210873497737, guid: 96698474ddc0f1f4a8ad9da707077ce5, type: 3}
+  EquipPrefab: {fileID: 7168001650226915726, guid: a82e782a04fc1684fb79704622b756d6, type: 3}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8974814676487978637}
   - component: {fileID: 37768469031952099}
   - component: {fileID: 8023380263828422119}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Scalpel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,9 +159,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9142045445815265956}
   - component: {fileID: -774670891342993717}
-  m_Layer: 10
-  m_Name: EquipScalpal
-  m_TagString: Scalpel
+  m_Layer: 0
+  m_Name: EquipScalpal11
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,3 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d899d99e0d2374fa0dc5a2228b03ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playingTexts: []
+  notPlayingTexts: []
+  audioSource: {fileID: 0}
+  Clips: []
