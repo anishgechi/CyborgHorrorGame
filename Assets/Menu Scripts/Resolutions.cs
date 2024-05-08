@@ -1,50 +1,73 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class Resolutions : MonoBehaviour
 {
+    [SerializeField] private TMPro.TMP_Dropdown resolutionDropDown;    //check name!
 
-    public TMP_Dropdown resolutionDropdown;
+    private Resolution[] resolutions;
+    private List<Resolution> filteredResolutions;
 
-    Resolution[] resolutions;
-
-    void Start()
+    //private float currentRefreshRate;
+    private int currentResolutionIndex = 0;
+    [HideInInspector] public Resolution resolution;
+    private void Start()
     {
         resolutions = Screen.resolutions;
+        filteredResolutions = new List<Resolution>();
 
-        resolutionDropdown.ClearOptions();
+        resolutionDropDown.ClearOptions();
+        //currentRefreshRate = Screen.currentResolution.refreshRate;
 
-        List<string> options = new List<string>();
-
-        int currentResolutionIndex = 0;
         for (int i = 0; i < resolutions.Length; i++)
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
-            options.Add(option);
+            if (!filteredResolutions.Any(x => x.width == resolutions[i].width && x.height == resolutions[i].height))  //check if resolution already exists in list
+            {
+                filteredResolutions.Add(resolutions[i]);  //add resolution to list if it doesn't exist yet
+            }
+        }
 
-            if (resolutions[i].width == Screen.currentResolution.width &&
-                resolutions[i].height == Screen.currentResolution.height)
+        List<string> options = new List<string>();
+        for (int i = 0; i < filteredResolutions.Count; i++)
+        {
+            string resolutionOption = filteredResolutions[i].width + " x " + filteredResolutions[i].height;
+            options.Add(resolutionOption);
+            if (filteredResolutions[i].width == Screen.width && filteredResolutions[i].height == Screen.height)
             {
                 currentResolutionIndex = i;
             }
         }
 
-        resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
+        resolutionDropDown.AddOptions(options);
+        resolutionDropDown.value = currentResolutionIndex;
+        resolutionDropDown.RefreshShownValue();
     }
 
-    public void SetResolution (int resolutionIndex)
+    public void SetResolution(int resolutionIndex)
     {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
+        resolution = filteredResolutions[resolutionIndex];
+        if (PlayerPrefs.GetInt("ScreenMode") == 0)
+        {
+            // Switch to 4k full
+            Screen.SetResolution(resolution.width, resolution.height, true);
 
-    public void SetFullscreen(bool isFullscreen)
-    {
-        Screen.fullScreen = isFullscreen;
+            //Screen.fullScreen = true;
+            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+        }
+        if (PlayerPrefs.GetInt("ScreenMode") == 1)
+        {
+            Screen.SetResolution(resolution.width, resolution.height, true);
+            //Screen.fullScreen = true;
+            Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+        }
+        if (PlayerPrefs.GetInt("ScreenMode") == 2)
+        {
+            Screen.SetResolution(resolution.width, resolution.height, false);
+            //Screen.fullScreen = false;
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+        }
     }
 }
