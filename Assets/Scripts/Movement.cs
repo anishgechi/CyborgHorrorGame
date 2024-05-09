@@ -63,11 +63,7 @@ public class Movement : MonoBehaviour
             PlayFootStepSound();
         }
     }
-
-    void FixedUpdate()
-    {
-
-    }
+    
     
     // Start is called before the first frame update
     void Start()
@@ -145,8 +141,7 @@ public class Movement : MonoBehaviour
 
         Vector3 movement = transform.right * horizontalInput + transform.forward * verticalInput;
         movement.Normalize();
-
-        transform.Translate(movement * WalkSpeed * Time.deltaTime, Space.World);
+        RB.velocity = movement * WalkSpeed;
     }
 
 
